@@ -3,13 +3,13 @@ import { DataGrid } from '@mui/x-data-grid';
 
 export default function BasicEditingGrid({ gridItems, historyData }) {
 
-  const historyDataArray= [];
+  const historyDataArray= historyData;
   const columns = Object.keys(gridItems[0]).map((item)=>{ 
-    return { field: item, headerName: item.toUpperCase(), width: 180, editable: true }
+    return { field: item, headerName: item.toUpperCase(), width: 160, editable: true }
   })
 
   return (
-    <div style={{ height: 300, width: '75%' }}>
+    <div style={{ height: 300, width: '65%', 'margin-right': '10px' }}>
       
       <DataGrid
         autoHeight
@@ -24,14 +24,14 @@ export default function BasicEditingGrid({ gridItems, historyData }) {
         onCellEditStop={(params, event) => {
           const updatedData= gridItems.map((item)=>{
             if(item.id === params.row.id) {
-              console.log(item[params.field], params.row.id)
               item[params.field]=event.target.value
             }
             return item
             }
             )
           localStorage.setItem('gridData', JSON.stringify(updatedData))
-          const history = {row: params.id, column: params.field, updatedValue: event.target.value, updatedTime: event.timeStamp}
+          const history = {row: params.id, column: params.field, updatedValue: event.target.value, updatedTime: new Date().toLocaleString()}
+          console.log(history)
           historyDataArray.push(history)
           localStorage.setItem('historyData', JSON.stringify(historyDataArray))
         }}

@@ -1,0 +1,10 @@
+.history {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.history-item {
+  display: flex;
+  flex-direction: row;
+  /* margin: 10px 10px; */
+}
