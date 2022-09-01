@@ -3,6 +3,8 @@ import './history.css';
 
 export default function History({ historyData }) {
   return (
+    <div>
+    <div className="title">History</div>
     <div className="history">
       { historyData.map((history)=>{
       return <div className="history-item">
@@ -11,7 +13,6 @@ export default function History({ historyData }) {
       </div>
     })}
     </div>
-   
-    
+    </div>
   )
 }

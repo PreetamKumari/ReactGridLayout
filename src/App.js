@@ -38,12 +38,19 @@ function App() {
   
   return (
     <div className="App">
+      <div className="title">React Data Grid</div>
+      <div className="history-search">
+      <input placeholder="Search for data..."></input>
+      <button>search</button>
+      <button className="btn-history" onClick={showHistory}>History</button>
+      </div>
+      <div className="grid-history">
       <Grid gridItems={gridItems} historyData={historyData}/>
       <div className="history">
-        <button className="btn-history" onClick={showHistory}>History</button>
         {
           show && <History historyData={historyData}/>
         }
+      </div>
       </div>
     </div>
   );

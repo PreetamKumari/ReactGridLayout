@@ -1,6 +1,7 @@
 .App {
   text-align: center;
-  display: flex
+  display: flex;
+  flex-direction: column;
 }
 
 .history {
@@ -10,11 +11,28 @@
 }
 
 .btn-history {
-position: absolute;
-top: 0px;
 font-size: 15px;
 background-color: lightblue;
 padding: 7px 7px;
 border-radius: 5px;
+margin-left: 680px;
+}
+
+.history-search {
+display: flex;
+flex-direction: row;
+margin: 10px 10px;
+}
+
+.grid-history {
+  display: flex;
+  flex-direction: row;
+  margin: 10px 10px;
+}
+
+.title { 
+  background-color: lightblue;
+  padding: 10px;
+  border: 1px solid
 }
 
