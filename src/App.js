@@ -16,7 +16,7 @@ function App() {
 
   const [gridItems] = useState(getLocalStorageGridData())
   const [historyData] = useState(getLocalStorageHistoryData())
-  const [show, toggleShow] = useState(true)
+  const [show, toggleShow] = useState(false)
 
   useEffect(()=>{ 
     if(localStorage.getItem('historyData') == null) {

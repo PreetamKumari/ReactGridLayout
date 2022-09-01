@@ -7,7 +7,7 @@ export default function History({ historyData }) {
       { historyData.map((history)=>{
       return <div className="history-item">
       <div>{`Updated value at row: ${history.row} and field: ${history.column} `}</div>
-      <div>{history.updatedTime.substring(8,20)}</div>
+      <div>{history.updatedTime.substring(8,21)}</div>
       </div>
     })}
     </div>
