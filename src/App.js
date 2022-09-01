@@ -14,8 +14,8 @@ function App() {
     localStorage.setItem('historyData', JSON.stringify([]))
   }
 
-  const [gridItems, setGridItems] = useState(getLocalStorageGridData())
-  const [historyData, setHistoryData] = useState(getLocalStorageHistoryData())
+  const [gridItems] = useState(getLocalStorageGridData())
+  const [historyData] = useState(getLocalStorageHistoryData())
   const [show, toggleShow] = useState(true)
 
   useEffect(()=>{ 
